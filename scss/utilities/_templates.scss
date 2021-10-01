@@ -1,0 +1,19 @@
+// template classes scss to use width @extend directive
+
+%reset-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+%img-adaptive {
+    max-width: 100%;
+    height: auto;
+}
+
+%img-fill {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+

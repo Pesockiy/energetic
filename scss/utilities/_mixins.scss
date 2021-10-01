@@ -1,0 +1,18 @@
+// mixins
+
+@mixin transition($prop: all, $time: .5s, $delay: null) {
+    transition: $prop $time $delay;
+}
+
+@mixin mainButton($bgColor: $mainColor) {
+    padding: 15px;
+    min-height: 55px;
+    display: inline-block;
+    min-width: 185px;
+    border-radius: 4px;
+    background-color: $bgColor;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 600;
+}

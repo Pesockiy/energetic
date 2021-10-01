@@ -1,0 +1,133 @@
+// block header
+.header {
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding-top: 53px;
+    padding-bottom: 53px;
+    transition: padding .3s;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+
+    &__logo {
+        max-width: 202px;
+        flex-shrink: 0;
+        margin-right: 10px;
+    }
+
+    &__breadcrumb {
+        margin-top: 40px;
+    }
+
+    &.fixed {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: #fff;
+    }
+
+}
+
+
+//block navigation
+.nav {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+    }
+
+    &.active &__mobile-bottom {
+        margin-top: auto;
+        margin-bottom: 40px;
+
+        &-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__item+&__item {
+        margin-left: 40px;
+    }
+
+    &__link {
+        @extend %reset-link;
+        @include transition(border-color, .3s);
+
+        position: relative;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-bottom: 2px solid transparent;
+        font-weight: 600;
+
+        &.active,
+        &:hover {
+            border-color: $mainColor;
+        }
+
+    }
+
+}
+
+// BREADCRUMBS 
+.breadcrumb {
+    position: relative;
+    top: -50px;
+    padding-left: 0;
+    overflow-x: auto;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    min-width: 100%;
+    list-style-type: none;
+
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+
+    &__item {
+        flex-shrink: 0;
+        font-size: 16px;
+        line-height: 1.5;
+        color: $textColor;
+    }
+
+    &__item+&__item {
+        margin-left: 20px;
+    }
+
+    &__link {
+        @extend %reset-link;
+        @include transition(text-decoration-color, .3s);
+        display: flex;
+        align-items: center;
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        color: $blackColor;
+
+        &:hover {
+            text-decoration-color: $textColor;
+        }
+
+        &::after {
+            content: '';
+            flex-shrink: 0;
+            height: 14px;
+            width: 7px;
+            border-radius: 0;
+            margin-left: 20px;
+            background: url(../img/icons/breadcrumb-arrow.svg) no-repeat left center/7px;
+        }
+    }
+}
