@@ -84,9 +84,6 @@
         max-width: 864px;
         margin-bottom: 30px;
 
-        @media screen and (min-width: 992px) {
-            // margin-right: -200px;
-        }
     }
 
     &__list {
@@ -151,9 +148,17 @@
 
 // excellence section 
 .excellence {
+    position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
     &__inner {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(368px, 1fr));
+        // display: grid;
+        // grid-template-columns: repeat(auto-fit, minmax(308px, 1fr));
         grid-gap: 10px;
     }
 
@@ -163,6 +168,8 @@
 
     &__item {
         height: 198px;
+        float: left;
+        width: 33%;
     }
 
     @media screen and (min-width: 769px) and (max-width: 992px) {}
@@ -192,13 +199,59 @@
     padding: 30px;
 
     &--accent {
+        height: auto;
         box-shadow: $cardShadow;
         border-radius: 8px;
     }
 
     &__ttl {
+        margin-bottom: 20px;
         font-size: 18px;
         line-height: 1.5;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+    }
+
+    &__bottom {}
+
+    &__left {
+        flex-shrink: 0;
+        width: 50px;
+        height: 50px;
+        margin-right: 20px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    &__right {}
+
+    &__img {}
+
+    &__bottom {}
+
+    &__heading {
+        margin-bottom: 4px;
+        font-size: 14px;
+        line-height: 1.5;
+        font-weight: 600;
+    }
+
+    &__text:not(:last-of-type) {
+        margin-bottom: 4px;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 1.5;
+        color: $textColor;
+
+        &--call {
+            padding-left: 23px;
+            background: url('../img/contact-center/carbon_phone-incoming.svg') no-repeat left center;
+        }
     }
 
     @media screen and (min-width: 769px) and (max-width: 992px) {
@@ -298,3 +351,41 @@
 }
 
 // !!!
+
+// informative
+.informative {
+    &__inner {
+        display: flex;
+        flex-flow: column wrap;
+        max-height: 400px;
+    }
+
+    &__img-wrap,
+    &__text-block {
+        flex: 0 1 50%;
+    }
+
+    &__img-wrap {
+        max-width: 392px;
+        max-height: 374px;
+    }
+
+    &__ttl {
+        margin-bottom: 30px;
+    }
+
+    &__list {
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        .markered-list__item {
+            margin-bottom: 20px;
+            flex: 0 1 49%;
+        }
+        .markered-list__item + .markered-list__item {
+            margin-top: 0;
+        }
+    }
+}
