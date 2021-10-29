@@ -17,18 +17,65 @@
     <link rel="stylesheet" href="./style/adaptive.min.css">
 
     <!-- header starts -->
-    <header class="header header--color-white">
+    <!-- updated header -->
+    <header class="header header--desk-white">
         <div class="container">
             <div class="header__inner">
                 <a href="#" class="logo header__logo">
+                    <img src="./img/contact-center/logo-dark_background.svg" alt="logo"
+                        class="logo__img logo__img--desk">
                     <img src="./img/common/Energetichub_logo_update.svg" alt="logo" class="logo__img">
-                    <img src="./img/contact-center/logo-dark_background.svg" alt="logo" class="logo__img">
                 </a>
                 <!-- mobile navigation -->
                 <nav class="nav header__nav nav__mobile">
                     <ul class="nav__list">
                         <li class="nav__item">
                             <a href="#" class="nav__link">Про нас</a>
+                        </li>
+                        <li class="nav__item ">
+                            <a href="#" class="nav__link">Услуги <img class="arrow" src="./img/icons/arrow.svg"
+                                    alt="arrow"></a>
+                            <ul class="nav__list nav__list--innner">
+                                <li class="nav__item">
+                                    <a href="#" class="nav__link">Про нас</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a href="#" class="nav__link">Услуги</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a href="#" class="nav__link">Решения</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Решения <img class="arrow" src="./img/icons/arrow.svg"
+                                    alt="arrow"></a>
+                            <ul class="nav__list nav__list--innner">
+                                <li class="nav__item">
+                                    <a href="#" class="nav__link">Про нас</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a href="#" class="nav__link">Услуги</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a href="#" class="nav__link">Решения</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Отрасли <img class="arrow" src="./img/icons/arrow.svg"
+                                    alt="arrow"></a>
+                            <ul class="nav__list nav__list--innner">
+                                <li class="nav__item">
+                                    <a href="#" class="nav__link">Про нас</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a href="#" class="nav__link">Услуги</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a href="#" class="nav__link">Решения</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav__item">
                             <a href="#" class="nav__link">Блог</a>
@@ -47,6 +94,25 @@
                     </div>
                     <!-- !mobile nav buttons  container -->
                 </nav>
+                <div class="header__lang lang">
+                    <div class="lang__label">
+                        <img class="lang__icon" src="./img/contact-center/lang-ico.svg" alt="lang icon">
+                        <span class="lang__name">Язык:</span>
+                    </div>
+                    <!-- <div class="lang__text">Русский</div> -->
+                    <ul class="lang__list">
+                        <li class="lang__item lang-item--ru">
+                            <a class="lang__link" lang="ru-RU" hreflang="ru-RU" href="">RU</a>
+                        </li>
+                        <!-- <li class="lang__item lang-item-4 lang-item-uk current-lang lang__item--ua">
+                            <a class="lang__link" lang="uk" hreflang="uk" href="">UA</a>
+                        </li>
+                        <li class="lang__item lang-item--en">
+                            <a class="lang__link" lang="en-EN" hreflang="en-EN" href="">EN</a>
+                        </li> -->
+                    </ul>
+                    <img class="arrow" src="./img/icons/arrow.svg" alt="arrow">
+                </div>
                 <button class="burger-btn"></button>
             </div>
         </div>
@@ -73,21 +139,24 @@
         </section>
         <!-- ends section block-services -->
 
-        <section class="section">
+        <section class="section contact-center">
             <div class="container">
-                <div class="common-block">
-                    <div class="common-block__left">
-                        <div class="common-item">
-                            <div class="common-item__img-wrap">
-                                <img src="./img/contact-center/support_technical.svg" class="common-item__img" alt="">
+                <div class="common-block contact-center__inner">
+                    <div class="common-block__left contact-center__left">
+                        <div class="common-item contact-center__item">
+                            <div class="common-item__img-wrap contact-center__img-wrap">
+                                <img src="./img/contact-center/support_technical.svg" class="common-item__ico" alt="">
                             </div>
-                            <h3 class="common-item__ttl">Быстро обрабатываем обращения</h3>
-                            <p>Наши специалисты быстро решают вопросы клиентов
+                            <h3 class="h3 contact-center__ttl">Быстро обрабатываем обращения</h3>
+                            <p class="main-text contact-center__text">Наши специалисты быстро решают вопросы клиентов
                                 и помогают им оставаться довольными качеством продукта.</p>
                         </div>
                     </div>
-                    <div class="common-block__right">
-                        <img class="common-block__img" src="./img/contact-center/contact-center.jpg" alt="">
+                    <div class="common-block__right contact-center__right">
+                        <img class="common-block__img contact-center__img contact-center__img--desktop"
+                            src="./img/contact-center/contact-center.jpg" alt="">
+                        <img class="common-block__img contact-center__img contact-center__img--mobile"
+                            src="./img/contact-center/support-mobile.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -96,13 +165,15 @@
         <!-- starts informative  -->
         <section class="section informative">
             <div class="container">
+                <!-- с этой секцией все ок) ей сейчас больно,но я вскоре вылечу ее гридами. -->
                 <div class="informative__inner">
-                    <div class="informative__img-wrap bordered-block">
+                    <div class="informative__img-wrap informative__img-wrap--sm-none bordered-block">
                         <img src="./img/contact-center/call-center-with-team-workers1.jpg" alt=""
                             class="informative__img">
                     </div>
                     <div class="informative__text-block">
-                        <h3 class="h3 informative__ttl"></h3>
+                        <h3 class="h3 informative__ttl">Специалисты техподдержки 
+                            EnergeticHub:</h3>
                         <ul class="markered-list informative__list">
                             <li class="markered-list__item">Устанавливают и настраивают программное обеспечение</li>
                             <li class="markered-list__item">Обеспечивают техподдержку приложений</li>
@@ -110,7 +181,7 @@
                             <li class="markered-list__item">Помогают в восстановлении доступов</li>
                         </ul>
                     </div>
-                    <button class="btn-get-relation" data-aos="fade-up">
+                    <button class="btn-get-relation informative__btn" data-aos="fade-up">
                         Замовити консультацію
                     </button>
                 </div>
@@ -125,74 +196,69 @@
                     Преимущества работы с EnergeticHub
                 </h2>
                 <div class="excellence__inner">
-                    <div class="excellence__item b-tile b-tile--accent">
-                        <h4 class="h4 b-tile__ttl">Быстрое масштабирование поддержки за счет операторов
-                            в разных городах
+
+                    <div class="excellence__item b-tile b-tile--accent b-tile--full">
+                        <h4 class="h4 b-tile__ttl">Поддержка 24/7 по телефону
+                            и в чатах
                         </h4>
-                        <div class="b-tile__bottom">
-                            <img src="./img/contact-center/map.jpg" alt="" class="b-tile__img">
-                        </div>
-                    </div>
-                    <div class="excellence__item b-tile">
-                        <h4 class="h4 b-tile__ttl">Поддержка клиентов
-                            в режиме 24/7
-                        </h4>
-                        <div class="b-tile__bottom">
-                            <div class="b-tile__content">
-                                <div class="b-tile__left">
-                                    <img src="./img/contact-center/portrait-confident-cool-positive-call-center-worker-can-help-with-problems-wear-black-earphones-wear-formalwear-clothes-isolated-grey-color-wall.jpg"
-                                        alt="" class="b-tile__pic">
+                        <div class="b-tile__body">
+                            <div class="b-call-center">
+                                
+                                <div class="b-call-center__left b-call-center__left--positioned">
+                                    <img src="./img/contact-center/call-center-group.png" alt=""
+                                        class="b-call-center__img b-call-center__img--desktop">
+                                    <img src="./img/contact-center/portrait-beautiful-phone-operator-man-wearing-microphone-headset-working-office-speaking-with-client-isolated-gray-wall 1.jpg"
+                                        alt="" class="b-call-center__img b-call-center__img--mobile">
                                 </div>
-                                <div class="b-tile__right">
-                                    <h4 class="b-tile__heading">Контактный центр</h4>
-                                    <p class="b-tile__text b-tile__text--call">10:34</p>
+                                <div class="b-call-center__right b-call-center__right--positioned">
+                                    <h4 class="b-call-center__heading">Контактный центр</h4>
+                                    <img class="b-call-center__ico b-tile__ico" src="./img/contact-center/Frame-6701.jpg"
+                                        alt="icon chat">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="excellence__item b-tile">
-                        <h4 class="h4 b-tile__ttl">Регулярная статистика
-                            по звонкам
+                        <h4 class="h4 b-tile__ttl">80% ответов в течение
+                            20 секунд
                         </h4>
-                        <div class="b-tile__bottom">
-                            <div class="b-tile__content">
-                                <div class="b-tile__left">
-                                    <img src="./img/contact-center/conversion.svg" alt="" class="b-tile__pic">
+                        <div class="b-tile__body">
+                            <div class="b-call-center">
+                                <div class="b-call-center__left">
+                                    <img src="./img/contact-center/conversion.svg" alt="" class="b-call-center__pic">
                                 </div>
-                                <div class="b-tile__right">
-                                    <h4 class="b-tile__heading"><span class="b-tile__text">Конверсия:</span> 19% <img
+                                <div class="b-call-center__right">
+                                    <h4 class="b-call-center__heading"><span class="b-call-center__text">Конверсия:</span> 19% <img
                                             class="conversion-up" src="./img/contact-center/top-green-arrow.svg" alt="">
                                     </h4>
-                                    <h4 class="b-tile__heading"><span class="b-tile__text">Уровень сервиса 81%:</span>
+                                    <h4 class="b-call-center__heading"><span class="b-call-center__text">Уровень сервиса 81%:</span>
                                         20 сек</h4>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="excellence__item b-tile">
-                        <h4 class="h4 b-tile__ttl">Регулярная статистика
-                            по звонкам
+                        <h4 class="h4 b-tile__ttl">Быстрое масштабирование
+                            поддержки
                         </h4>
-                        <div class="b-tile__bottom">
-                            <img src="./img/contact-center/analytics.jpg" alt="" class="b-tile__img">
+                        <div class="b-tile__body">
+                            <img src="./img/contact-center/scale.jpg" alt="" class="b-tile__img">
                         </div>
                     </div>
                     <div class="excellence__item b-tile">
-                        <h4 class="h4 b-tile__ttl">Многоканальная поддержка
-                            на разных языках
+                        <h4 class="h4 b-tile__ttl">Поддержка уровня L2
+                            для сложных запросов
                         </h4>
-                        <div class="b-tile__bottom">
-                            <div class="b-tile__content">
-                                <div class="b-tile__left">
-                                    <img src="./img/contact-center/turned-close-up-photo-successful-call-center-worker-man-wear-headset-listen-help-clients-with-problems-isolated-grey-color-wall 1.png"
-                                        alt="" class="b-tile__pic">
-                                </div>
-                                <div class="b-tile__right">
-                                    <h4 class="b-tile__heading">Контактный центр
-                                    </h4>
-                                    <p class="b-tile__text">Hello, Hola, Добрий день...</p>
-                                </div>
-                            </div>
+                        <div class="b-tile__body">
+                            <img src="./img/contact-center/L1_L2.jpg" alt="" class="b-tile__img">
+                        </div>
+                    </div>
+                    <div class="excellence__item b-tile">
+                        <h4 class="h4 b-tile__ttl">Статистика по причинам
+                            популярных обращений
+                        </h4>
+                        <div class="b-tile__body">
+                            <img src="./img/contact-center/calls-analytics.jpg" alt="" class="b-tile__img">
                         </div>
                     </div>
                 </div>

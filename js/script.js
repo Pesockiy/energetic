@@ -12,14 +12,32 @@ if (document.querySelector(".service__tabs-nav")) {
     let serviceTabsBlock = document.querySelector('.service__tabs');
     let tabs = serviceTabsBlock.querySelectorAll('.service__tab');
     let blocksToShow = serviceTabsBlock.querySelectorAll('.service__content-wrapper');
+    let tabsWrapper = document.querySelector('.service__tabs-nav');
+    let contentBody = document.querySelector('.service__content-body');
 
-    if (window.screen.width <= 768) {
-
-        let tabsButtons = serviceTabsBlock.querySelectorAll('.service__control-button');
+    function mobileTabs() {
+        // let tabsButtons = serviceTabsBlock.querySelectorAll('.service__control-button');
         [...tabs].forEach((tab, index) => {
             blocksToShow[index].insertAdjacentElement('beforebegin', tab);
         });
     };
+    function desktopTabs() {
+        [...contentBody.querySelectorAll('.service__tab')].forEach((item) => {
+            tabsWrapper.appendChild(item);
+        });
+    };
+    if (window.screen.width <= 768) {
+        mobileTabs()
+    }
+    window.addEventListener("orientationchange", function () {
+        if (window.screen.width <= 768) {
+            mobileTabs();
+
+        } else {
+            desktopTabs()
+        }
+
+    }, false);
 
     window.addEventListener('click', (event) => {
         let e = event.target;
@@ -120,7 +138,7 @@ function changeCounterSlider() {
     let elementsToCount = [...document.querySelectorAll('.splide--top-slider .splide__slide')];
 
     document.querySelector('.b-count').innerHTML = `${elementsToCount.indexOf(activeSlide) + 1} / ${elementsToCount.length}`;
-   
+
 };
 
 if (document.querySelector('.splide--top-slider')) {
@@ -780,3 +798,47 @@ if (document.getElementById('errorModal')) {
         window.location.reload();
     });
 };
+
+
+if (document.querySelector('.accordion')) {
+    let accordion = document.querySelector('.accordion');
+    let tabs = accordion.querySelectorAll('.accordion__tab');
+    let accordionContents = accordion.querySelectorAll('.accordion__content');
+
+    let resetClass = (collection, className = 'active') => {
+        collection.forEach(elem => {
+            // console.log(elem)
+            elem.classList.remove(`${className}`);
+        });
+    }
+
+    // let setActiveTab = (event) => {
+    //     resetClass(tabs);
+    //     resetClass(accordionContents);
+    //     this.classList.add('active');
+    //     accordionContents[index].classList.add('active')
+    // };
+
+    tabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => {
+            resetClass(tabs);
+            resetClass(accordionContents);
+            tab.classList.add('active');
+            if (!(tab.nextElementSibling == null) && !tab.nextElementSibling.matches('.accordion__content')) {
+                accordionContents[index].classList.add('active');
+            } else if (tab.nextElementSibling == null) {
+                accordionContents[index].classList.add('active');
+            }
+
+            if (!(tab.nextElementSibling == null) && tab.nextElementSibling.matches('.accordion__content')) {
+                
+                tab.nextElementSibling.classList.add('active');
+                let deskTabs = [...tabs].splice(0, tabs.length / 2);
+                deskTabs[index - tabs.length / 2].classList.add('active');
+
+            };
+        });
+    });
+};
+
+
