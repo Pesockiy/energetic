@@ -1,0 +1,70 @@
+.b-comment__text {
+    line-height: 1.5;
+}
+
+.common-accordion.collapsed.collapsed .common-accordion__body {
+    overflow: initial;
+}
+
+.formula__inner .formula__item {
+    min-width: 240px;
+}
+
+.form__field.form__checkbox:checked+.form__field.form__checkbox-label {
+    background-color: $mainColor;
+    border-color: $mainColor;
+
+    &::after {
+        content: url('../img/support/135-Stroke.svg');
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .b-comment__text {
+        font-size: 14px;
+    }
+
+    .service__control .service__control-item:hover .service__control-text {
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .b-comment__text {
+        line-height: 24px;
+    }
+
+    .service .service__content-body .service__tab {
+        padding: 25px 44px 23px 16px;
+        border-bottom: 1px solid #E0E3E6;
+
+        &:first-of-type {
+            border-top: 1px solid #E0E3E6;
+
+        }
+    }
+
+    .service .service__tabs-nav {
+        border: none;
+    }
+
+    .service .service__content-body .service__control-item {
+        padding: 15px;
+        margin-left: 34px;
+    }
+
+    .service .service__title {
+        padding-left: 16px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .contact-center .contact-center__text-bottom {
+        left: 10%;
+    }
+}
+@media screen and (max-width: 375px) {
+    .contact-center .contact-center__text-bottom {
+        left: 0;
+    }
+}
