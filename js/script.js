@@ -44,15 +44,19 @@ if (document.querySelector(".service__tabs-nav")) {
         if (!e.classList.contains('service__tab')) return;
         event.preventDefault();
         if (e.classList.contains('active')) {
-            blocksToShow[[...tabs].indexOf(e)].classList.remove('active');
-            e.classList.remove('active');
+            if(window.innerWidth <= 768) {
+                blocksToShow[[...tabs].indexOf(e)].classList.remove('active');
+                e.classList.remove('active');
+            }
         } else {
             [...tabs].forEach((elem, index) => {
                 elem.classList.remove('active');
                 blocksToShow[index].classList.remove('active');
             });
-            blocksToShow[[...tabs].indexOf(e)].classList.toggle('active');
-            e.classList.toggle('active');
+            // blocksToShow[[...tabs].indexOf(e)].classList.toggle('active');
+            // e.classList.toggle('active');
+            blocksToShow[[...tabs].indexOf(e)].classList.add('active');
+            e.classList.add('active');
         };
     });
 };
