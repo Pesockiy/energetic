@@ -204,9 +204,9 @@
                 bottom: 0;
                 left: 0;
                 right: 0;
-                opacity: 0;
+                // opacity: 0;
                 background-color: $whiteColor;
-                animation: op .3s .2s both;
+                // animation: op .3s .2s both;
 
                 @keyframes op {
 
@@ -1404,7 +1404,7 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 768px) and (max-width: 1040px) {
     .container {
         padding-left: 40px;
         padding-right: 40px;

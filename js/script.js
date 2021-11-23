@@ -44,7 +44,7 @@ if (document.querySelector(".service__tabs-nav")) {
         if (!e.classList.contains('service__tab')) return;
         event.preventDefault();
         if (e.classList.contains('active')) {
-            if(window.innerWidth <= 768) {
+            if (window.innerWidth <= 768) {
                 blocksToShow[[...tabs].indexOf(e)].classList.remove('active');
                 e.classList.remove('active');
             }
@@ -438,22 +438,6 @@ function setTop() {
 setTop();
 window.addEventListener('scroll', setTop);
 
-// mobile nav
-if (document.querySelector('.header')) {
-
-    let body = document.body;
-    let btnBurger = body.querySelector('.burger-btn');
-    let mobileNav = body.querySelector('.header__nav');
-
-    btnBurger.addEventListener('click', () => {
-        body.classList.remove('ov-hidden');
-        btnBurger.classList.toggle('active');
-        mobileNav.classList.toggle('active');
-
-    });
-};
-
-
 
 // json player inite
 if (document.getElementById('my-player')) {
@@ -835,7 +819,7 @@ if (document.querySelector('.accordion')) {
             }
 
             if (!(tab.nextElementSibling == null) && tab.nextElementSibling.matches('.accordion__content')) {
-                
+
                 tab.nextElementSibling.classList.add('active');
                 let deskTabs = [...tabs].splice(0, tabs.length / 2);
                 deskTabs[index - tabs.length / 2].classList.add('active');
@@ -844,5 +828,23 @@ if (document.querySelector('.accordion')) {
         });
     });
 };
+// mobile nav
+if (document.querySelector('.header')) {
+
+    let body = document.body;
+    let btnBurger = body.querySelector('.burger-btn');
+    let mobileNav = body.querySelector('.header__nav');
+
+    btnBurger.addEventListener('click', () => {
+        btnBurger.classList.toggle('active');
+        mobileNav.classList.toggle('active');
+        if (btnBurger.classList.contains('active')) {
+            body.classList.add('ov-hidden');
+        } else body.classList.remove('ov-hidden');
+
+    });
+};
+
+
 
 

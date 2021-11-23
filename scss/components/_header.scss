@@ -46,14 +46,17 @@
         list-style-type: none;
     }
 
-    &.active &__mobile-bottom {
-        margin-top: auto;
-        margin-bottom: 40px;
+    @media screen and(max-width:1040px) {
 
-        &-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        &.active &__mobile-bottom {
+            margin-top: auto;
+            margin-bottom: 40px;
+
+            &-inner {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
         }
     }
 
