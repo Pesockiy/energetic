@@ -763,7 +763,7 @@
         background: url('../img/contact-center/arrow-right.svg') no-repeat 95% center;
 
         &:hover {
-            @include transition(box-shadow, .3s);
+            // @include transition(box-shadow, .3s);
             box-shadow: 0 0 2px 2px $mainColor;
         }
     }
