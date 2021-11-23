@@ -211,6 +211,13 @@
     }
     
 }
+.nav__list--innner {
+    z-index: -1;
+    padding: 60px;
+    box-shadow: $cardShadow;
+    background-color: #fff;
+    color: #515257;
+}
 @media screen and (min-width: 992px) {
     .excellence__item.dn-lg  {
         display: none;
