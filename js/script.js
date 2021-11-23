@@ -845,6 +845,11 @@ if (document.querySelector('.header')) {
     });
 };
 
+window.onresize = () => {
+    if(window.innerWidth >= 1040) {
+        document.body.classList.remove('ov-hidden')
+    }
+}
 
 
 
